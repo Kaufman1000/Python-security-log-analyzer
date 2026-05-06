@@ -1,0 +1,4 @@
+Total: 78
+INFO: 11
+ERROR: 9
+Failed password: 78
