@@ -1,0 +1,78 @@
+ 192.168.1.15 - - [12/Mar/2026:08:01:11] "GET /index.html HTTP/1.1" 200 2345
+192.168.1.15 - - [12/Mar/2026:08:01:12] "GET /login HTTP/1.1" 200 1123
+192.168.1.23 - - [12/Mar/2026:08:01:13] "POST /login HTTP/1.1" 401 532
+192.168.1.23 - - [12/Mar/2026:08:01:14] "POST /login HTTP/1.1" 401 532
+192.168.1.23 - - [12/Mar/2026:08:01:15] "POST /login HTTP/1.1" 401 532
+10.0.0.4 - - [12/Mar/2026:08:02:01] "GET /admin HTTP/1.1" 403 1024
+172.16.0.8 - - [12/Mar/2026:08:02:10] "GET /dashboard HTTP/1.1" 200 3045
+203.0.113.5 - - [12/Mar/2026:08:02:11] "GET /wp-admin HTTP/1.1" 404 600
+203.0.113.5 - - [12/Mar/2026:08:02:12] "GET /phpmyadmin HTTP/1.1" 404 600
+203.0.113.5 - - [12/Mar/2026:08:02:13] "GET /.env HTTP/1.1" 404 600
+FIREWALL: date=2026-03-12 time=08:03:11 src=192.168.1.25 dst=8.8.8.8 action=allow service=DNS
+FIREWALL: date=2026-03-12 time=08:03:12 src=192.168.1.25 dst=142.250.190.14 action=allow service=HTTPS
+FIREWALL: date=2026-03-12 time=08:03:13 src=10.0.0.5 dst=185.199.108.153 action=allow service=HTTPS
+FIREWALL: date=2026-03-12 time=08:03:14 src=203.0.113.7 dst=192.168.1.10 action=deny service=SSH
+FIREWALL: date=2026-03-12 time=08:03:15 src=203.0.113.7 dst=192.168.1.10 action=deny service=SSH
+FIREWALL: date=2026-03-12 time=08:03:16 src=203.0.113.7 dst=192.168.1.10 action=deny service=SSH
+FIREWALL: date=2026-03-12 time=08:03:17 src=192.168.1.40 dst=13.107.21.200 action=allow service=HTTPS
+FIREWALL: date=2026-03-12 time=08:03:18 src=192.168.1.40 dst=13.107.21.200 action=allow service=HTTPS
+FIREWALL: date=2026-03-12 time=08:03:19 src=172.16.0.5 dst=45.33.32.156 action=deny service=RDP
+FIREWALL: date=2026-03-12 time=08:03:20 src=172.16.0.5 dst=45.33.32.156 action=deny service=RDP
+IDS ALERT [1:1000001:1] SQL Injection Attempt detected from 203.0.113.9 to 192.168.1.12
+IDS ALERT [1:1000002:1] Possible Port Scan from 198.51.100.11
+IDS ALERT [1:1000003:1] XSS Attempt detected from 203.0.113.12
+IDS ALERT [1:1000004:1] Brute Force Login detected from 198.51.100.11
+IDS ALERT [1:1000005:1] Suspicious DNS Tunneling from 192.168.1.50
+Mar 12 08:04:01 server sshd[1042]: Accepted password for admin from 192.168.1.15 port 53422 ssh2
+Mar 12 08:04:02 server sshd[1043]: Failed password for root from 203.0.113.7 port 41122 ssh2
+Mar 12 08:04:03 server sshd[1044]: Failed password for root from 203.0.113.7 port 41123 ssh2
+Mar 12 08:04:04 server sshd[1045]: Failed password for root from 203.0.113.7 port 41124 ssh2
+Mar 12 08:04:05 server sshd[1046]: Failed password for root from 203.0.113.7 port 41125 ssh2
+Mar 12 08:04:06 server sshd[1047]: Failed password for root from 203.0.113.7 port 41126 ssh2
+Mar 12 08:04:07 server sshd[1048]: Failed password for root from 203.0.113.7 port 41127 ssh2
+Mar 12 08:04:08 server sshd[1049]: Failed password for root from 203.0.113.7 port 41128 ssh2
+Mar 12 08:04:09 server sshd[1050]: Failed password for root from 203.0.113.7 port 41129 ssh2
+192.168.1.11 - - [12/Mar/2026:08:05:11] "GET /products HTTP/1.1" 200 4532
+192.168.1.12 - - [12/Mar/2026:08:05:12] "GET /cart HTTP/1.1" 200 1233
+192.168.1.13 - - [12/Mar/2026:08:05:13] "POST /checkout HTTP/1.1" 200 842
+192.168.1.14 - - [12/Mar/2026:08:05:14] "GET /api/data HTTP/1.1" 200 2333
+192.168.1.15 - - [12/Mar/2026:08:05:15] "GET /api/data HTTP/1.1" 200 2333
+FIREWALL: date=2026-03-12 time=08:06:11 src=203.0.113.10 dst=192.168.1.12 action=deny service=FTP
+FIREWALL: date=2026-03-12 time=08:06:12 src=203.0.113.10 dst=192.168.1.12 action=deny service=FTP
+FIREWALL: date=2026-03-12 time=08:06:13 src=203.0.113.10 dst=192.168.1.12 action=deny service=FTP
+FIREWALL: date=2026-03-12 time=08:06:14 src=203.0.113.10 dst=192.168.1.12 action=deny service=FTP
+FIREWALL: date=2026-03-12 time=08:06:15 src=203.0.113.10 dst=192.168.1.12 action=deny service=FTP
+IDS ALERT [1:2000001:1] Malware Command and Control traffic detected from 192.168.1.60
+IDS ALERT [1:2000002:1] Possible Data Exfiltration from 192.168.1.61
+IDS ALERT [1:2000003:1] Suspicious ICMP Tunnel detected from 203.0.113.15
+Mar 12 08:07:01 server sudo: user1 : TTY=pts/0 ; COMMAND=/bin/cat /etc/shadow
+Mar 12 08:07:02 server sudo: user1 : TTY=pts/0 ; COMMAND=/usr/bin/nmap -sS 192.168.1.0/24
+Mar 12 08:07:03 server sudo: user1 : TTY=pts/0 ; COMMAND=/usr/bin/netstat -an
+Mar 12 08:07:04 server sudo: user1 : TTY=pts/0 ; COMMAND=/usr/bin/tcpdump -i eth0
+Mar 12 08:07:05 server sudo: user1 : TTY=pts/0 ; COMMAND=/usr/bin/ps aux
+Mar 12 08:07:06 server sudo: user1 : TTY=pts/0 ; COMMAND=/usr/bin/whoami
+192.168.1.20 - - [12/Mar/2026:08:08:11] "GET /reports HTTP/1.1" 200 3451
+192.168.1.21 - - [12/Mar/2026:08:08:12] "GET /reports HTTP/1.1" 200 3451
+192.168.1.22 - - [12/Mar/2026:08:08:13] "GET /reports HTTP/1.1" 200 3451
+192.168.1.23 - - [12/Mar/2026:08:08:14] "GET /reports HTTP/1.1" 200 3451
+192.168.1.24 - - [12/Mar/2026:08:08:15] "GET /reports HTTP/1.1" 200 3451
+2026-05-05 09:15:11 INFO  WebServer: Service started successfully
+2026-05-05 09:15:15 INFO  Auth: User admin logged in from 192.168.1.10
+2026-05-05 09:15:18 ERROR WebServer: Failed to load module mod_security
+2026-05-05 09:16:02 INFO  Firewall: Rule update completed successfully
+2026-05-05 09:16:25 ERROR Firewall: Unauthorized connection attempt from 203.0.113.45 to port 22
+2026-05-05 09:17:03 INFO  IDS: Scan detected from 185.220.101.4
+2026-05-05 09:17:44 ERROR Auth: Failed login attempt for user root from 198.51.100.77
+2026-05-05 09:18:12 INFO  Nginx: GET /login returned 200 for 192.168.1.21
+2026-05-05 09:18:49 ERROR IDS: Possible SQL injection attempt from 203.0.113.101
+2026-05-05 09:19:30 INFO  System: Log rotation completed
+2026-05-05 09:20:11 ERROR WebServer: Timeout connecting to backend service
+2026-05-05 09:20:42 INFO  Auth: User john authenticated successfully from 192.168.1.33
+2026-05-05 09:21:09 ERROR Firewall: Port scan detected from 45.33.32.156
+2026-05-05 09:21:55 INFO  IDS: Malware signature database updated
+2026-05-05 09:22:17 ERROR Auth: Multiple failed login attempts detected from 91.134.183.12
+2026-05-05 09:22:49 INFO  WebServer: Configuration reload successful
+2026-05-05 09:23:16 ERROR System: Disk space critically low on /var/log
+2026-05-05 09:23:55 INFO  Firewall: Block rule applied to IP 185.220.101.4
+2026-05-05 09:24:21 ERROR IDS: Suspicious traffic pattern detected from 198.51.100.24
+2026-05-05 09:25:04 INFO  Auth: User mary logged out successfully
